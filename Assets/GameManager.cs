@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public GameObject HalkBar;
     public GameObject KralBar;
 
+    public GameObject PARATEXT;
+    public GameObject YEMEKTEXT;
+
     private GameObject kaybettin;
     
     void Start()
@@ -22,7 +25,11 @@ public class GameManager : MonoBehaviour
         VillageSpawner = GameObject.Find("VillagerSpawner");
         kaybettin.SetActive(false);
         KralBar.GetComponent<Slider>().value = KralMetre;
+        
         HalkBar.GetComponent<Slider>().value = KoyluMetre;
+
+        PARATEXT.GetComponent<Text>().text = AltinSayisi.ToString();
+        YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
     }
 
     public bool Kabul(int altin, int yemek)
@@ -53,10 +60,12 @@ public class GameManager : MonoBehaviour
             kaybettin.SetActive(true);
             kaybettin.GetComponent<Text>().text += "\n Krall seni kıskanıp öldürttü.";
         }
-
-        return true;
         KralBar.GetComponent<Slider>().value = KralMetre;
         HalkBar.GetComponent<Slider>().value = KoyluMetre;
+        PARATEXT.GetComponent<Text>().text = AltinSayisi.ToString();
+        YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
+        return true;
+        
     }
 
     public void Reddet()
