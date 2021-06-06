@@ -3653,6 +3653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VillagerPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 4875636188147083896, guid: 43edc8596a56db542a8575316a9dcdcd, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4875636188147119706, guid: 43edc8596a56db542a8575316a9dcdcd, type: 3}
       propertyPath: m_RootOrder
       value: 0
