@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     private GameObject kaybettin;
     
-    public float timeRemaining = 10;
+    public float timeRemaining = 60;
     public bool timerIsRunning = false;
 
     public int bolumNum;
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
                 PARATEXT.GetComponent<Text>().text = AltinSayisi.ToString();
                 YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
                 timerIsRunning = true;
-                timeRemaining = 10;
+                timeRemaining = 60;
                 break;
             default:
                 bolumNum = 2;
