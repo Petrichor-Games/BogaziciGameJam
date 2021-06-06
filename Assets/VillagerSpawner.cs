@@ -14,10 +14,6 @@ public class VillagerSpawner : MonoBehaviour
     
     public void CreateVillager()
     {
-
-       
-        
-        
         if (GameObject.FindWithTag("Villager") == null)
         {
             int rand_ask_gold = Random.Range(10,25);
@@ -27,16 +23,9 @@ public class VillagerSpawner : MonoBehaviour
             Instantiate(VillagerPrefabs[Random.Range(0, 7)], transform);
             GameObject.FindWithTag("Villager").GetComponent<VillagerScript>().VillagerClass = villager1;
         }
-        
-
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
 public class Villager
 {
