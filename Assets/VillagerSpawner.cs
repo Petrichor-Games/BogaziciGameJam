@@ -5,25 +5,43 @@ using UnityEngine;
 public class VillagerSpawner : MonoBehaviour
 {
     public List<GameObject> VillagerPrefabs;
+    public bool SpawnVillager = true;
+
+    public GameObject SuankiVillager;
+
+    public GameManager GameManager;
+    private Villager SuankivillagerClass;
 
     void Start()
     {
-        
+        GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         InvokeRepeating("CreateVillager", 2.0f, 5f);
     }
     
     public void CreateVillager()
     {
-        if (GameObject.FindWithTag("Villager") == null)
+        if (GameObject.FindWithTag("Villager") == null && SpawnVillager == true )
         {
-            int rand_ask_gold = Random.Range(10,25);
-            int rand_ask_food = Random.Range(10,25);
+            int rand_ask_gold = Random.Range(0,25);
+            int rand_ask_food = Random.Range(0,25);
             Villager villager1 = new Villager(rand_ask_gold,rand_ask_food);
+            SuankivillagerClass = villager1;
 
-            Instantiate(VillagerPrefabs[Random.Range(0, 7)], transform);
+            SuankiVillager = Instantiate(VillagerPrefabs[Random.Range(0, 7)], transform);
             GameObject.FindWithTag("Villager").GetComponent<VillagerScript>().VillagerClass = villager1;
         }
     }
+
+    public void Kabul()
+    {
+        GameManager.Kabul(SuankivillagerClass.ask_gold,SuankivillagerClass.ask_food);
+    }
+
+    public void Red()
+    {
+        GameManager.Reddet();
+    }
+    
 
     
 }
