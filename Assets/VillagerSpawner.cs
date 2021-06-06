@@ -5,6 +5,7 @@ using UnityEngine;
 public class VillagerSpawner : MonoBehaviour
 {
     public List<GameObject> VillagerPrefabs;
+    public bool SpawnVillager = true;
 
     void Start()
     {
@@ -14,10 +15,10 @@ public class VillagerSpawner : MonoBehaviour
     
     public void CreateVillager()
     {
-        if (GameObject.FindWithTag("Villager") == null)
+        if (GameObject.FindWithTag("Villager") == null && SpawnVillager == true )
         {
-            int rand_ask_gold = Random.Range(10,25);
-            int rand_ask_food = Random.Range(10,25);
+            int rand_ask_gold = Random.Range(0,25);
+            int rand_ask_food = Random.Range(0,25);
             Villager villager1 = new Villager(rand_ask_gold,rand_ask_food);
 
             Instantiate(VillagerPrefabs[Random.Range(0, 7)], transform);
