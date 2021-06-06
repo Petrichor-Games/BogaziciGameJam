@@ -50,3 +50,6 @@ TagManager:
   - name: Masa
     uniqueID: 938036825
     locked: 0
+  - name: Kasa
+    uniqueID: 1599172251
+    locked: 0

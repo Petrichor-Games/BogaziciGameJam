@@ -34,12 +34,21 @@ public class VillagerSpawner : MonoBehaviour
 
     public void Kabul()
     {
-        GameManager.Kabul(SuankivillagerClass.ask_gold,SuankivillagerClass.ask_food);
+        if (SuankiVillager == null && !SuankiVillager.GetComponent<VillagerScript>().hazirmi)
+        {
+            return;
+        }
+        
+        SuankiVillager.GetComponent<VillagerScript>().TesekkurEt();
     }
 
     public void Red()
     {
-        GameManager.Reddet();
+        if (SuankiVillager == null && !SuankiVillager.GetComponent<VillagerScript>().hazirmi)
+        {
+            return;
+        }
+        SuankiVillager.GetComponent<VillagerScript>().sinirlen();
     }
     
 

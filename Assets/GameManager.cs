@@ -16,16 +16,17 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         kaybettin = GameObject.Find("Kaybettin");
-        VillageSpawner = GameObject.Find("VillageSpawner");
+        VillageSpawner = GameObject.Find("VillagerSpawner");
         kaybettin.SetActive(false);
     }
 
-    public void Kabul(int altin, int yemek)
+    public bool Kabul(int altin, int yemek)
     {
-        if (AltinSayisi<altin && YemekSayisi< yemek)
+        if (AltinSayisi < altin && YemekSayisi < yemek)
         {
             Debug.Log("Bendede yokki");
             Reddet();
+            return false;
         }
 
         YemekSayisi -= yemek;
@@ -47,11 +48,13 @@ public class GameManager : MonoBehaviour
             kaybettin.SetActive(true);
             kaybettin.GetComponent<Text>().text += "\n Krall seni kıskanıp öldürttü.";
         }
+
+        return true;
     }
 
     public void Reddet()
     {
-        if (KoyluMetre<100)
+        if (KoyluMetre<99)
         {
             KoyluMetre += 10;
         }
@@ -64,11 +67,4 @@ public class GameManager : MonoBehaviour
     }
     
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-       
-    }
 }
