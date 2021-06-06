@@ -37,7 +37,8 @@ public class GameManager : MonoBehaviour
                 YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
                 break;
             case 2:
-                
+                PARATEXT.GetComponent<Text>().text = AltinSayisi.ToString();
+                YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
                 break;
             default:
                 bolumNum = 0;
@@ -45,6 +46,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Reflesh()
+    {
+        PARATEXT.GetComponent<Text>().text = AltinSayisi.ToString();
+        YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
+    }
+    
+    
     public bool Kabul(int altin, int yemek)
     {
         if (AltinSayisi < altin && YemekSayisi < yemek)
