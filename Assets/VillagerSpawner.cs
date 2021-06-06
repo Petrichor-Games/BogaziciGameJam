@@ -24,7 +24,8 @@ public class VillagerSpawner : MonoBehaviour
             int rand_ask_food = Random.Range(10,25);
             Villager villager1 = new Villager(rand_ask_gold,rand_ask_food);
 
-            Instantiate(VillagerPrefabs[Random.Range(0, 7)], this.transform);
+            Instantiate(VillagerPrefabs[Random.Range(0, 7)], transform);
+            GameObject.FindWithTag("Villager").GetComponent<VillagerScript>().VillagerClass = villager1;
         }
         
 

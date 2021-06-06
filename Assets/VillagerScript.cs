@@ -16,7 +16,8 @@ public class VillagerScript : MonoBehaviour
     void SoruSor()
     {
         var soru = Instantiate(KonusmaBalonu, transform);
-        soru.GetComponentInChildren<TextMesh>().text = VillagerClass.ask_food.ToString() + " Yemek istiyorum";
+        var gelen = soru.transform.GetChild(0).gameObject;
+        gelen.GetComponent<TextMesh>().text = VillagerClass.ask_food.ToString() + " Yemek istiyorum";
     }
     
     
