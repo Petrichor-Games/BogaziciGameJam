@@ -37,7 +37,7 @@ public class VillagerSpawner : MonoBehaviour
 
         if (villagerSayisi == 5)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 
