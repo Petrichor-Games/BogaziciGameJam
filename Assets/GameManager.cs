@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public float AltinSayisi;
     public GameObject VillageSpawner;
 
+    public GameObject HalkBar;
+    public GameObject KralBar;
+
     private GameObject kaybettin;
     
     void Start()
@@ -18,6 +21,8 @@ public class GameManager : MonoBehaviour
         kaybettin = GameObject.Find("Kaybettin");
         VillageSpawner = GameObject.Find("VillagerSpawner");
         kaybettin.SetActive(false);
+        KralBar.GetComponent<Slider>().value = KralMetre;
+        HalkBar.GetComponent<Slider>().value = KoyluMetre;
     }
 
     public bool Kabul(int altin, int yemek)
@@ -50,6 +55,8 @@ public class GameManager : MonoBehaviour
         }
 
         return true;
+        KralBar.GetComponent<Slider>().value = KralMetre;
+        HalkBar.GetComponent<Slider>().value = KoyluMetre;
     }
 
     public void Reddet()
@@ -57,6 +64,8 @@ public class GameManager : MonoBehaviour
         if (KoyluMetre<99)
         {
             KoyluMetre += 10;
+            KralBar.GetComponent<Slider>().value = KralMetre;
+            HalkBar.GetComponent<Slider>().value = KoyluMetre;
         }
         else
         {
