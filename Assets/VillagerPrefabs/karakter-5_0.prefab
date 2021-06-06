@@ -95,3 +95,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77aa017163100f5408deba738d08dee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KonusmaBalonu: {fileID: 2811856926030430069, guid: 4ef30dfa39149bf47bfe211cd1566a95, type: 3}
