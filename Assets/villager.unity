@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.94706136, g: 0.87529117, b: 0.72939736, a: 1}
+  m_IndirectSpecularColor: {r: 0.94706136, g: 0.87529117, b: 0.7293973, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -350,9 +350,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96640558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.020287, y: 0.46, z: -2.2073293}
+  m_LocalPosition: {x: 3.33, y: 0.5, z: -2.2073293}
   m_LocalScale: {x: 1, y: 0.21462, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1645485347}
+  - {fileID: 180483681}
+  - {fileID: 786783172}
+  - {fileID: 1084086779}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -749,6 +753,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ad67a7cd19345449ac3646963ee9aa, type: 3}
+--- !u!1 &180483678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 180483681}
+  - component: {fileID: 180483680}
+  - component: {fileID: 180483679}
+  m_Layer: 0
+  m_Name: WheatSpawn (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &180483679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180483678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.111195, y: 1.6707716, z: 10.374527}
+  m_Center: {x: -2.630005, y: 0.3353858, z: 1.5964413}
+--- !u!114 &180483680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180483678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e382faac8fcedb44089e0b712cb188c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugdayPrefab: {fileID: 2599087688938046742, guid: e8bdaec13a58dbb4baa39ec8d7499150, type: 3}
+  coinSpawn: {fileID: 180483678}
+--- !u!4 &180483681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180483678}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 31.442999, y: 0, z: -6.802671}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 96640561}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &191322563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1098,6 +1161,65 @@ Transform:
   m_Father: {fileID: 1804266024}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 3.266, y: 0, z: 0}
+--- !u!1 &422350469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422350472}
+  - component: {fileID: 422350471}
+  - component: {fileID: 422350470}
+  m_Layer: 0
+  m_Name: ParaSpawn (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &422350470
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422350469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.111195, y: 1.6707716, z: 10.374527}
+  m_Center: {x: -2.630005, y: 0.3353858, z: 1.5964413}
+--- !u!114 &422350471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422350469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e382faac8fcedb44089e0b712cb188c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugdayPrefab: {fileID: 2554159241449051082, guid: 6c9dfe75afb18f04aaa04f6108d23246, type: 3}
+  coinSpawn: {fileID: 422350469}
+--- !u!4 &422350472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422350469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.120287, y: 0, z: 19.65733}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1397921908}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &444456099 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 464622, guid: 2542c0c9b732a7443b932fdee19d5cc8, type: 3}
@@ -1217,6 +1339,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84579d7df5c364847b3ee871751cbc4d, type: 3}
+--- !u!1 &569930701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569930704}
+  - component: {fileID: 569930703}
+  - component: {fileID: 569930702}
+  m_Layer: 0
+  m_Name: ParaSpawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &569930702
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569930701}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.111195, y: 1.6707716, z: 10.374527}
+  m_Center: {x: -2.630005, y: 0.3353858, z: 1.5964413}
+--- !u!114 &569930703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569930701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e382faac8fcedb44089e0b712cb188c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugdayPrefab: {fileID: 2554159241449051082, guid: 6c9dfe75afb18f04aaa04f6108d23246, type: 3}
+  coinSpawn: {fileID: 569930701}
+--- !u!4 &569930704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569930701}
+  m_LocalRotation: {x: -0, y: 0.6965676, z: -0, w: 0.71749115}
+  m_LocalPosition: {x: -35.380287, y: 0, z: -1.3226707}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1397921908}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 88.305, z: 0}
 --- !u!1 &626392099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,6 +1653,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4462df8489303ba448bfd5971b82232f, type: 3}
+--- !u!1 &786783171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 786783172}
+  - component: {fileID: 786783174}
+  - component: {fileID: 786783173}
+  m_Layer: 0
+  m_Name: WheatSpawn (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &786783172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786783171}
+  m_LocalRotation: {x: -0, y: 0.7095403, z: -0, w: 0.7046649}
+  m_LocalPosition: {x: -29.75, y: 0, z: -0.9526708}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 96640561}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 90.395, z: 0}
+--- !u!65 &786783173
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786783171}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.111195, y: 1.6707716, z: 10.374527}
+  m_Center: {x: -2.630005, y: 0.3353858, z: 1.5964413}
+--- !u!114 &786783174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786783171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e382faac8fcedb44089e0b712cb188c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugdayPrefab: {fileID: 2599087688938046742, guid: e8bdaec13a58dbb4baa39ec8d7499150, type: 3}
+  coinSpawn: {fileID: 786783171}
 --- !u!1 &788444320
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,6 +2688,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4793203722042106, guid: 5e9761041a6b5b647a3b3b0d79c4ad68, type: 3}
   m_PrefabInstance: {fileID: 979545042}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1084086778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084086779}
+  - component: {fileID: 1084086781}
+  - component: {fileID: 1084086780}
+  m_Layer: 0
+  m_Name: WheatSpawn (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1084086779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084086778}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.0699997, y: 0, z: 18.267328}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 96640561}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1084086780
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084086778}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.111195, y: 1.6707716, z: 10.374527}
+  m_Center: {x: -2.630005, y: 0.3353858, z: 1.5964413}
+--- !u!114 &1084086781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084086778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e382faac8fcedb44089e0b712cb188c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugdayPrefab: {fileID: 2599087688938046742, guid: e8bdaec13a58dbb4baa39ec8d7499150, type: 3}
+  coinSpawn: {fileID: 1084086778}
 --- !u!1001 &1121870610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2509,6 +2808,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ad67a7cd19345449ac3646963ee9aa, type: 3}
+--- !u!1 &1179422841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1179422844}
+  - component: {fileID: 1179422843}
+  - component: {fileID: 1179422842}
+  m_Layer: 0
+  m_Name: ParaSpawn (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1179422842
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179422841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.111195, y: 1.6707716, z: 10.374527}
+  m_Center: {x: -2.630005, y: 0.3353858, z: 1.5964413}
+--- !u!114 &1179422843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179422841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e382faac8fcedb44089e0b712cb188c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugdayPrefab: {fileID: 2554159241449051082, guid: 6c9dfe75afb18f04aaa04f6108d23246, type: 3}
+  coinSpawn: {fileID: 1179422841}
+--- !u!4 &1179422844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179422841}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.799713, y: 0, z: -21.292671}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1397921908}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1180293425
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,7 +3543,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.020287, y: 0.21017, z: -2.2073293}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 569930704}
+  - {fileID: 422350472}
+  - {fileID: 1179422844}
+  - {fileID: 1857411875}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3540,6 +3902,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 481f3c49bab8cb147b9063e6cde9e858, type: 3}
+--- !u!1 &1645485344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1645485347}
+  - component: {fileID: 1645485346}
+  - component: {fileID: 1645485345}
+  m_Layer: 0
+  m_Name: WheatSpawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1645485345
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645485344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.111195, y: 1.6707716, z: 10.374527}
+  m_Center: {x: -2.630005, y: 0.3353858, z: 1.5964413}
+--- !u!114 &1645485346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645485344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e382faac8fcedb44089e0b712cb188c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugdayPrefab: {fileID: 2599087688938046742, guid: e8bdaec13a58dbb4baa39ec8d7499150, type: 3}
+  coinSpawn: {fileID: 1645485344}
+--- !u!4 &1645485347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645485344}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 26.82, y: 0, z: -17.84267}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 96640561}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1678529173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4204,6 +4625,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4462df8489303ba448bfd5971b82232f, type: 3}
+--- !u!1 &1857411872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1857411875}
+  - component: {fileID: 1857411874}
+  - component: {fileID: 1857411873}
+  m_Layer: 0
+  m_Name: ParaSpawn (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1857411873
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857411872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.111195, y: 1.6707716, z: 10.374527}
+  m_Center: {x: -2.630005, y: 0.3353858, z: 1.5964413}
+--- !u!114 &1857411874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857411872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e382faac8fcedb44089e0b712cb188c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugdayPrefab: {fileID: 2554159241449051082, guid: 6c9dfe75afb18f04aaa04f6108d23246, type: 3}
+  coinSpawn: {fileID: 1857411872}
+--- !u!4 &1857411875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857411872}
+  m_LocalRotation: {x: -0, y: -0.8566562, z: -0, w: 0.51588786}
+  m_LocalPosition: {x: 24.669712, y: 0, z: 0.74732924}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1397921908}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -117.886, z: 0}
 --- !u!1001 &1858159318
 PrefabInstance:
   m_ObjectHideFlags: 0
