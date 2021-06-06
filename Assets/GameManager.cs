@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += SceneManagerOnsceneLoaded;
         switch (bolumNum)
         {
-            case 1 :
+            case 2 :
                 kaybettin = GameObject.Find("Kaybettin");
                 VillageSpawner = GameObject.Find("VillagerSpawner");
                 kaybettin.SetActive(false);
@@ -62,10 +62,11 @@ public class GameManager : MonoBehaviour
                 PARATEXT.GetComponent<Text>().text = AltinSayisi.ToString();
                 YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
                 break;
-            case 2:
+            case 1:
                 PARATEXT.GetComponent<Text>().text = AltinSayisi.ToString();
                 YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
                 timerIsRunning = true;
+                timeText = GameObject.Find("timeText").GetComponent<Text>();
                 timeRemaining = 60;
                 break;
             default:
@@ -167,7 +168,7 @@ public class GameManager : MonoBehaviour
                 bolumNum = 1;
 
                
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
                 
 
             }
@@ -181,7 +182,7 @@ public class GameManager : MonoBehaviour
         
         switch (arg0.buildIndex)
         {
-            case 1 :
+            case 2 :
                 kaybettin = GameObject.Find("Kaybettin");
                 VillageSpawner = GameObject.Find("VillagerSpawner");
                 kaybettin.SetActive(false);
@@ -198,7 +199,7 @@ public class GameManager : MonoBehaviour
                 PARATEXT.GetComponent<Text>().text = AltinSayisi.ToString();
                 YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
                 break;
-            case 0:
+            case 1:
                 PARATEXT =  GameObject.Find("ParaTEXT");
                 YEMEKTEXT =  GameObject.Find("YemekTEXT");
                 timeText = GameObject.Find("timeText").GetComponent<Text>();
