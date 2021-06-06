@@ -20,7 +20,7 @@ public class VillagerSpawner : MonoBehaviour
     
     public void CreateVillager()
     {
-        if (GameObject.FindWithTag("Villager") == null && SpawnVillager == true )
+        if (GameObject.FindWithTag("Villager") == null && SpawnVillager )
         {
             int rand_ask_gold = Random.Range(0,25);
             int rand_ask_food = Random.Range(0,25);
@@ -34,20 +34,34 @@ public class VillagerSpawner : MonoBehaviour
 
     public void Kabul()
     {
-        if (SuankiVillager == null && !SuankiVillager.GetComponent<VillagerScript>().hazirmi)
+        if (SuankiVillager == null)
         {
             return;
         }
+
+        if (!SuankiVillager.GetComponent<VillagerScript>().hazirmi)
+        {
+            return;
+        }
+        
+        
         
         SuankiVillager.GetComponent<VillagerScript>().TesekkurEt();
     }
 
     public void Red()
     {
-        if (SuankiVillager == null && !SuankiVillager.GetComponent<VillagerScript>().hazirmi)
+        if (SuankiVillager == null)
         {
             return;
         }
+        
+        if (!SuankiVillager.GetComponent<VillagerScript>().hazirmi)
+        {
+            return;
+        }
+
+        
         SuankiVillager.GetComponent<VillagerScript>().sinirlen();
     }
     

@@ -29,7 +29,7 @@ public class VillagerScript : MonoBehaviour
 
     public void TesekkurEt()
     {
-        
+        hazirmi = false;
         Destroy(transform.gameObject, 1);
         kabulEtti = true;
         var gelen = GameManager.Kabul(VillagerClass.ask_gold,VillagerClass.ask_food);
@@ -49,7 +49,7 @@ public class VillagerScript : MonoBehaviour
         {
             return;
         }
-        
+        hazirmi = false;
         Soru.GetComponent<TextMesh>().text = "Tamam öyle olsun";
         Destroy(transform.gameObject, 2);
         GameManager.Reddet();
