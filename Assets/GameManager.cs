@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -24,9 +26,29 @@ public class GameManager : MonoBehaviour
 
     public int bolumNum;
     public Text timeText;
-    
+
+    //private static GameManager _instance;
+
+    public static GameManager Instance;
+
+
+    private void Awake()
+    {
+        if(Instance==null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
     void Start()
     {
+        SceneManager.sceneLoaded += SceneManagerOnsceneLoaded;
         switch (bolumNum)
         {
             case 1 :
@@ -44,10 +66,10 @@ public class GameManager : MonoBehaviour
                 PARATEXT.GetComponent<Text>().text = AltinSayisi.ToString();
                 YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
                 timerIsRunning = true;
-                timeRemaining = 60;
+                timeRemaining = 10;
                 break;
             default:
-                bolumNum = 0;
+                bolumNum = 2;
                 break;
         }
     }
@@ -61,7 +83,14 @@ public class GameManager : MonoBehaviour
     
     public bool Kabul(int altin, int yemek)
     {
-        if (AltinSayisi < altin && YemekSayisi < yemek)
+        if ( YemekSayisi < yemek)
+        {
+            Debug.Log("Bendede yokki");
+            Reddet();
+            return false;
+        }
+
+        if (AltinSayisi < altin )
         {
             Debug.Log("Bendede yokki");
             Reddet();
@@ -120,6 +149,9 @@ public class GameManager : MonoBehaviour
     }
     
     
+    
+    
+    
     void Update()
     {
         if (timerIsRunning)
@@ -130,13 +162,54 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                bolumNum = 1;
+
+               
+                SceneManager.LoadScene(1);
+                
+
             }
             DisplayTime(timeRemaining);
         }
     }
-    
 
+    private void SceneManagerOnsceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        Debug.Log(arg0.buildIndex);
+        
+        switch (arg0.buildIndex)
+        {
+            case 1 :
+                kaybettin = GameObject.Find("Kaybettin");
+                VillageSpawner = GameObject.Find("VillagerSpawner");
+                kaybettin.SetActive(false);
+                KralBar = GameObject.Find("KralBar");
+                HalkBar = GameObject.Find("HalkBar");
+                
+                KralBar.GetComponent<Slider>().value = KralMetre;
+        
+                HalkBar.GetComponent<Slider>().value = KoyluMetre;
+                
+                PARATEXT =  GameObject.Find("ParaTEXT");
+                YEMEKTEXT =  GameObject.Find("YemekTEXT");
+
+                PARATEXT.GetComponent<Text>().text = AltinSayisi.ToString();
+                YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
+                break;
+            case 0:
+                PARATEXT =  GameObject.Find("ParaTEXT");
+                YEMEKTEXT =  GameObject.Find("YemekTEXT");
+                timeText = GameObject.Find("timeText").GetComponent<Text>();
+                PARATEXT.GetComponent<Text>().text = AltinSayisi.ToString();
+                YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
+                timerIsRunning = true;
+                timeRemaining = 60;
+                break;
+            default:
+                bolumNum = 0;
+                break;
+        }
+    }
 }

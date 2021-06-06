@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VillagerSpawner : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class VillagerSpawner : MonoBehaviour
     public GameManager GameManager;
     private Villager SuankivillagerClass;
 
+    private int villagerSayisi = 0;
+
     void Start()
     {
         GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -20,7 +23,7 @@ public class VillagerSpawner : MonoBehaviour
     
     public void CreateVillager()
     {
-        if (GameObject.FindWithTag("Villager") == null && SpawnVillager )
+        if (GameObject.FindWithTag("Villager") == null && SpawnVillager && villagerSayisi < 5 )
         {
             int rand_ask_gold = Random.Range(0,25);
             int rand_ask_food = Random.Range(0,25);
@@ -29,6 +32,12 @@ public class VillagerSpawner : MonoBehaviour
 
             SuankiVillager = Instantiate(VillagerPrefabs[Random.Range(0, 7)], transform);
             GameObject.FindWithTag("Villager").GetComponent<VillagerScript>().VillagerClass = villager1;
+            villagerSayisi++;
+        }
+
+        if (villagerSayisi == 5)
+        {
+            SceneManager.LoadScene(0);
         }
     }
 

@@ -11,11 +11,7 @@ public class RandomSpawn : MonoBehaviour
     
         void Start()
         {
-
-           
-                    SpawnCoins(coinSpawn);
-
-                
+            SpawnCoins(coinSpawn);
         }
     
 
