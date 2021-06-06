@@ -161,6 +161,7 @@ MonoBehaviour:
   KralBar: {fileID: 951617385}
   PARATEXT: {fileID: 1145279738}
   YEMEKTEXT: {fileID: 1726350642}
+  bolumNum: 1
 --- !u!4 &122947254
 Transform:
   m_ObjectHideFlags: 0
