@@ -63,10 +63,11 @@ public class GameManager : MonoBehaviour
                 YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
                 break;
             case 1:
+                timeText = GameObject.Find("timeText").GetComponent<Text>();
                 PARATEXT.GetComponent<Text>().text = AltinSayisi.ToString();
                 YEMEKTEXT.GetComponent<Text>().text = YemekSayisi.ToString();
                 timerIsRunning = true;
-                timeText = GameObject.Find("timeText").GetComponent<Text>();
+                
                 timeRemaining = 60;
                 break;
             default:

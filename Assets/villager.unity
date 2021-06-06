@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.94706136, g: 0.87529117, b: 0.7293973, a: 1}
+  m_IndirectSpecularColor: {r: 0.94706136, g: 0.87529117, b: 0.72939736, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3648,7 +3648,7 @@ MonoBehaviour:
   YEMEKTEXT: {fileID: 1288687638}
   timeRemaining: 10
   timerIsRunning: 0
-  bolumNum: 2
+  bolumNum: 1
   timeText: {fileID: 1975692900}
 --- !u!4 &1491961158
 Transform:

@@ -17,7 +17,7 @@ public class RandomSpawn : MonoBehaviour
 
         void SpawnCoins(GameObject asd)
         {
-            int coinsToSpawn = 3;
+            int coinsToSpawn = 13;
             for (int i = 0; i < coinsToSpawn; i++)
             {
                 GameObject temp = Instantiate(bugdayPrefab, asd.transform);
